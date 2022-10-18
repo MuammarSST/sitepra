@@ -1,4 +1,6 @@
-<?php require_once 'proses\data.php'?>
+<?php require_once 'proses\data.php'
+?>
+
 <!doctype html>
 <html lang="en">
   <head>

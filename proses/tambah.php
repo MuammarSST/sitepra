@@ -24,7 +24,7 @@
 </nav>
 <div class="container">
 
-<form class="row g-3">
+<form class="row g-3" method="post" action="proses/simpan_tambah.php">
   
 <div class="card">
   <div class="card-header">
@@ -97,7 +97,7 @@
   </div>
 </div>
 
-<!-- <div class="card">
+<div class="card">
   <div class="card-header">
     PENGELOLA TEKNIS
   </div>
@@ -114,32 +114,32 @@
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
-      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
+      <td> <input type="text" class="form-control" id="pl_nama_1" required ></td>
+      <td> <input type="text" class="form-control" id="pl_instasi_asal_1" required ></td>
 
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
-      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
+      <td> <input type="text" class="form-control" id="pl_nama_2" required ></td>
+      <td> <input type="text" class="form-control" id="pl_instasi_asal_2" required ></td>
 
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
-      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
+      <td> <input type="text" class="form-control" id="pl_nama_3" required ></td>
+      <td> <input type="text" class="form-control" id="pl_instasi_asal_3" required ></td>
 
     </tr>
     <tr>
       <th scope="row">4</th>
-      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
-      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
+      <td> <input type="text" class="form-control" id="pl_nama_4" required ></td>
+      <td> <input type="text" class="form-control" id="pl_instasi_asal_4" required ></td>
 
     </tr>
     <tr>
       <th scope="row">5</th>
-      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
-      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
+      <td> <input type="text" class="form-control" id="pl_nama_5" required ></td>
+      <td> <input type="text" class="form-control" id="pl_instasi_asal_5" required ></td>
 
     </tr>
   </tbody>
@@ -149,7 +149,7 @@
   </div>
 
 
-</div> -->
+</div>
 
 <div class="card">
   <div class="card-header">
@@ -172,42 +172,50 @@
 </div>
 
   
-<!-- 
+
 <div class="card">
   <div class="card-header">
-    TIM PROVISIONAL HAND OVER (PH0)
+    TIM PROVISIONAL HAND OVER (PHO)
   </div>
   <div class="card-body">
   <table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">No.</th>
+      <th scope="col">Nama</th>
+      <th scope="col">Instansi Asal</th>
+
+    </tr>
+  </thead>
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
-      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
+      <td> <input type="text" class="form-control" id="pl_nama_1" required ></td>
+      <td> <input type="text" class="form-control" id="pl_instasi_asal_1" required ></td>
 
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
-      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
+      <td> <input type="text" class="form-control" id="pl_nama_2" required ></td>
+      <td> <input type="text" class="form-control" id="pl_instasi_asal_2" required ></td>
 
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
-      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
+      <td> <input type="text" class="form-control" id="pl_nama_3" required ></td>
+      <td> <input type="text" class="form-control" id="pl_instasi_asal_3" required ></td>
 
     </tr>
     <tr>
       <th scope="row">4</th>
-      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
-      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
+      <td> <input type="text" class="form-control" id="pl_nama_4" required ></td>
+      <td> <input type="text" class="form-control" id="pl_instasi_asal_4" required ></td>
 
     </tr>
     <tr>
       <th scope="row">5</th>
-      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
-      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
+      <td> <input type="text" class="form-control" id="pl_nama_5" required ></td>
+      <td> <input type="text" class="form-control" id="pl_instasi_asal_5" required ></td>
 
     </tr>
   </tbody>
@@ -217,7 +225,7 @@
   </div>
 
 
-</div> -->
+</div>
   
 
   <div class="card">
@@ -388,7 +396,7 @@
 </div>
 
   <div class="col-12">
-    <input type="submit" class="btn btn-primary" value="SIMPAN">
+    <input type="submit" class="btn btn-primary" value="Simpan">
   </div>
 </form>
 
