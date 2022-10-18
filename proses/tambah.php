@@ -97,7 +97,7 @@
   </div>
 </div>
 
-<div class="card">
+<!-- <div class="card">
   <div class="card-header">
     PENGELOLA TEKNIS
   </div>
@@ -149,7 +149,7 @@
   </div>
 
 
-</div>
+</div> -->
 
 <div class="card">
   <div class="card-header">
@@ -172,7 +172,7 @@
 </div>
 
   
-
+<!-- 
 <div class="card">
   <div class="card-header">
     TIM PROVISIONAL HAND OVER (PH0)
@@ -217,7 +217,7 @@
   </div>
 
 
-</div>
+</div> -->
   
 
   <div class="card">
@@ -226,27 +226,56 @@
   </div>
   <div class="card-body">
   <div class="col-12">
-    <label for="nama_perusahaan" class="form-label">1. Nama Perusahaan :</label>
-    <input type="text" class="form-control" id="nama_perusahaan" name="nama_perusahaan" required >
+    <label for="pr_nama_perusahaan" class="form-label">1. Nama Perusahaan :</label>
+    <input type="text" class="form-control" id="pr_nama_perusahaan" name="pr_nama_perusahaan" required >
   </div>
   <div class="col-12">
-    <label for="alamat_perusahaan" class="form-label">2. Alamat Perusahaan :</label>
-    <input type="text" class="form-control" id="alamat_perusahaan" required>
+    <label for="pr_nama_perusahaan" class="form-label">2. Alamat Perusahaan :</label>
+    <input type="text" class="form-control" id="pr_nama_perusahaan" name="pr_alamat_perusahaan" required>
   </div>
   <div class="col-12">
-    <label for="inputAddress2" class="form-label">3. Nama Pimpinan :</label>
-    <input type="text" class="form-control" id="inputAddress2" required>
+    <label for="pr_nama_perusahaan" class="form-label">3. Nama Pimpinan :</label>
+    <input type="text" class="form-control" id="pr_nama_perusahaan" name="pr_nama_pimpinan" required>
   </div>
   <div class="col-12">
-    <label for="inputAddress2" class="form-label">4. Alamat Pimpinan :</label>
-    <input type="text" class="form-control" id="inputAddress2" required>
+    <label for="pr_nama_perusahaan" class="form-label">4. Alamat Pimpinan :</label>
+    <input type="text" class="form-control" id="pr_nama_perusahaan" name="pr_alamat_pimpinan" required>
   </div>
   <div class="col-12">
-    <label for="inputAddress2" class="form-label">5. Nilai Kontrak :</label>
-    <input type="text" class="form-control" id="inputAddress2" required>
+    <label for="pr_nilai_kontrak" class="form-label">5. Nilai Kontrak :</label>
+    <input type="text" class="form-control" id="pr_nama_perusahaan" name="pr_nilai_kontrak" required>
   </div>
   </div>
 </div>
+
+<div class="card">
+  <div class="card-header">
+    PENGAWASAN 
+  </div>
+  <div class="card-body">
+  <div class="col-12">
+    <label for="pw_nama_perusahaan" class="form-label">1. Nama Perusahaan :</label>
+    <input type="text" class="form-control" id="pw_nama_perusahaan" name="pw_nama_perusahaan" required >
+  </div>
+  <div class="col-12">
+    <label for="pw_alamat_perusahaan" class="form-label">2. Alamat Perusahaan :</label>
+    <input type="text" class="form-control" id="pw_alamat_perusahaan" name="pw_alamat_perusahaan" required>
+  </div>
+  <div class="col-12">
+    <label for="pw_nama_pimpinan" class="form-label">3. Nama Pimpinan :</label>
+    <input type="text" class="form-control" id="pw_nama_pimpinan" name="pw_nama_pimpinan" required>
+  </div>
+  <div class="col-12">
+    <label for="pw_alamat_pimpinan" class="form-label">4. Alamat Pimpinan :</label>
+    <input type="text" class="form-control" id="pw_alamat_pimpinan" name="pw_alamat_pimpinan" required>
+  </div>
+  <div class="col-12">
+    <label for="pw_nilai_kontrak" class="form-label">5. Nilai Kontrak :</label>
+    <input type="text" class="form-control" id="pw_nilai_kontrak" name="pw_nilai_kontrak" required>
+  </div>
+  </div>
+</div>
+
 
 <div class="card">
   <div class="card-header">
@@ -254,41 +283,41 @@
   </div>
   <div class="card-body">
   <div class="col-12">
-    <label for="inputAddress" class="form-label">1. Nama Perusahaan :</label>
-    <input type="text" class="form-control" id="inputAddress"required >
+    <label for="pf_nama_perusahaan" class="form-label">1. Nama Perusahaan :</label>
+    <input type="text" class="form-control" id="pf_nama_perusahaan" name="pf_nama_perusahaan" required >
   </div>
   <div class="col-12">
-    <label for="inputAddress2" class="form-label">2. Alamat Perusahaan :</label>
-    <input type="text" class="form-control" id="inputAddress2" required>
+    <label for="pf_alamat_perusahaan" class="form-label">2. Alamat Perusahaan :</label>
+    <input type="text" class="form-control" id="pf_alamat_perusahaan" name="pf_alamat_perusahaan" required>
   </div>
   <div class="col-12">
-    <label for="inputAddress2" class="form-label">3. Nama Pimpinan :</label>
-    <input type="text" class="form-control" id="inputAddress2" required>
+    <label for="pf_nama_pimpinan" class="form-label">3. Nama Pimpinan :</label>
+    <input type="text" class="form-control" id="pf_nama_pimpinan" name="pf_nama_pimpinan" required>
   </div>
   <div class="col-12">
-    <label for="inputAddress2" class="form-label">4. Alamat Pimpinan :</label>
-    <input type="text" class="form-control" id="inputAddress2" required>
+    <label for="pf_nomor_kontrak" class="form-label">4. Nomor Kontrak :</label>
+    <input type="text" class="form-control" id="pf_nomor_kontrak" name="pf_nomor_kontrak" required>
   </div>
   <div class="col-12">
-    <label for="inputAddress2" class="form-label">5. Nilai Kontrak :</label>
-    <input type="text" class="form-control" id="inputAddress2" required>
+    <label for="pf_nilai_kontrak" class="form-label">5. Nilai Kontrak :</label>
+    <input type="text" class="form-control" id="pf_nilai_kontrak" name="pf_nilai_kontrak" required>
   </div>
   <div class="col-12">
-    <label for="inputAddress2" class="form-label">6. Waktu (Tanggal) :</label>
-    <input type="text" class="form-control" id="inputAddress2" required>
+    <label for="pf_tanggal" class="form-label">6. Waktu (Tanggal) :</label>
+    <input type="date" class="form-control" id="pf_tanggal" name="pf_tanggal" required>
   </div>
   <div class="col-12">
-    <label for="inputAddress2" class="form-label">7. Pagu :</label>
-    <input type="text" class="form-control" id="inputAddress2" required>
+    <label for="pf_pagu" class="form-label">7. Pagu :</label>
+    <input type="text" class="form-control" id="pf_pagu" name="pf_pagu" required>
   </div>
   <div class="col-12">
-    <label for="inputAddress2" class="form-label">8. Sumber Dana :</label>
-    <input type="text" class="form-control" id="inputAddress2" required>
+    <label for="pf_sumber_dana" class="form-label">8. Sumber Dana :</label>
+    <input type="text" class="form-control" id="pf_sumber_dana" name="pf_sumber_dana" required>
   </div>
   </div>
 </div>
 
-<div class="card">
+<!-- <div class="card">
   <div class="card-header">
     PROVISIONAL HAND OVER (PHO)
   </div>
@@ -303,9 +332,9 @@
   </div>
 
   </div>
-</div>
+</div> -->
 
-<div class="card">
+<!-- <div class="card">
   <div class="card-header">
     Hasil Akhir / Sementara
   </div>
@@ -316,42 +345,42 @@
 
 
   </div>
-</div>
+</div> -->
 
 <div class="card">
   <div class="card-header">
     Upload Foto Kondisi
   </div>
   <div class="card-body">
-  <label for="inputAddress2" class="form-label">Kondisi 1 :</label>
+  <label for="kondisi_1" class="form-label">Kondisi 1 :</label>
   <div class="input-group">
-    <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-    <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Upload Foto Kondisi 1</button>
+    <input type="file" class="form-control" id="kondisi_1" name="kondisi_1" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+    <button class="btn btn-outline-secondary" type="button" id="simpan_kondisi_1">Upload Foto Kondisi 1</button>
   </div>
-  <label for="inputAddress2" class="form-label">Kondisi 2 :</label>
+  <label for="kondisi_2" class="form-label">Kondisi 2 :</label>
   <div class="input-group">
-    <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-    <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Upload Foto Kondisi 2</button>
+    <input type="file" class="form-control" id="kondisi_2" name="kondisi_2" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+    <button class="btn btn-outline-secondary" type="button" id="simpan_kondisi_2">Upload Foto Kondisi 2</button>
   </div>
-  <label for="inputAddress2" class="form-label">Kondisi 3 :</label>
+  <label for="kondisi_3" class="form-label">Kondisi 3 :</label>
   <div class="input-group">
-    <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-    <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Upload Foto Kondisi 3</button>
+    <input type="file" class="form-control" id="kondisi_3" name="kondisi_3" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+    <button class="btn btn-outline-secondary" type="button" id="simpan_kondisi_3">Upload Foto Kondisi 3</button>
   </div>
-  <label for="inputAddress2" class="form-label">Kondisi 4 :</label>
+  <label for="kondisi_4" class="form-label">Kondisi 4 :</label>
   <div class="input-group">
-    <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-    <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Upload Foto Kondisi 4</button>
+    <input type="file" class="form-control" id="kondisi_4" name="kondisi_4" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+    <button class="btn btn-outline-secondary" type="button" id="simpan_kondisi_4">Upload Foto Kondisi 4</button>
   </div>
-  <label for="inputAddress2" class="form-label">Kondisi 5 :</label>
+  <label for="kondisi_5" class="form-label">Kondisi 5 :</label>
   <div class="input-group">
-    <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-    <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Upload Foto Kondisi 5</button>
+    <input type="file" class="form-control" id="kondisi_5" name="kondisi_5" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+    <button class="btn btn-outline-secondary" type="button" id="simpan_kondisi_5">Upload Foto Kondisi 5</button>
   </div>
-  <label for="inputAddress2" class="form-label">Kondisi 6 :</label>
+  <label for="kondisi_6" class="form-label">Kondisi 6 :</label>
   <div class="input-group">
-    <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-    <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Upload Foto Kondisi 6</button>
+    <input type="file" class="form-control" id="kondisi_6" name="kondisi_6" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+    <button class="btn btn-outline-secondary" type="button" id="simpan_kondisi_6">Upload Foto Kondisi 6</button>
   </div>
 
 
