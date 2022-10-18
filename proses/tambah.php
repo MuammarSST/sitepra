@@ -33,12 +33,20 @@
   <div class="card-body">
 
   <div class="col-12">
-    <label for="inputEmail4" class="form-label">NAMA PAKET :</label>
-    <input type="email" class="form-control" id="inputEmail4" required>
+    <label for="nama_paket" class="form-label">NAMA PAKET :</label>
+    <input type="text" class="form-control" id="nama_paket" name="nama_paket" required>
   </div>
   <div class="col-12">
-    <label for="inputPassword4" class="form-label">ALAMAT :</label>
-    <input type="password" class="form-control" id="inputPassword4" required>
+    <label for="alamat" class="form-label">ALAMAT :</label>
+    <input type="text" class="form-control" id="alamat" name="alamat" required>
+  </div>
+  <div class="col-12">
+    <label for="latitude" class="form-label">Latitude :</label>
+    <input type="text" class="form-control" id="latitude" name="latitude" required>
+  </div>
+  <div class="col-12">
+    <label for="longitude" class="form-label">Longitude :</label>
+    <input type="text" class="form-control" id="longitude" name="longitude" required>
   </div>
 
   </div>
@@ -49,21 +57,21 @@
   <div class="card-body">
 
     <div class="col-12">
-      <label for="inputState" class="form-label">SKPK :</label>
-      <select id="inputState" class="form-select" required>
+      <label for="skpk_id" class="form-label">SKPK :</label>
+      <select id="skpk_id" name="skpk_id" class="form-select" required>
         <option selected>--- PILIH SKPK ---</option>
         <option>...</option>
       </select>
     </div>
 
     <div class="col-12">
-      <label for="inputCity" class="form-label">KPA :</label>
-      <input type="text" class="form-control" id="inputCity" required>
+      <label for="kpa" class="form-label">KPA :</label>
+      <input type="text" class="form-control" id="kpa" name="kpa" required>
     </div>
 
     <div class="col-12">
-      <label for="inputZip" class="form-label">ALAMAT :</label>
-      <input type="text" class="form-control" id="inputZip" required>
+      <label for="alamat_skpk" class="form-label">ALAMAT :</label>
+      <input type="text" class="form-control" id="alamat_skpk" name="alamat_skpk" required>
     </div>
 
     </div>
@@ -75,16 +83,16 @@
   </div>
   <div class="card-body">
   <div class="col-12">
-    <label for="inputAddress" class="form-label">1. Nama PA :</label>
-    <input type="text" class="form-control" id="inputAddress" required >
+    <label for="nama_pa" class="form-label">1. Nama PA :</label>
+    <input type="text" class="form-control" id="nama_pa" name="nama_pa" required >
   </div>
   <div class="col-12">
-    <label for="inputAddress2" class="form-label">2. Nama Bendahara :</label>
-    <input type="text" class="form-control" id="inputAddress2" required>
+    <label for="nama_bendahara" class="form-label">2. Nama Bendahara :</label>
+    <input type="text" class="form-control" id="nama_bendahara" name="nama_bendahara" required>
   </div>
   <div class="col-12">
-    <label for="inputAddress2" class="form-label">3. Nama PPTK :</label>
-    <input type="text" class="form-control" id="inputAddress2" required>
+    <label for="nama_pptk" class="form-label">3. Nama PPTK :</label>
+    <input type="text" class="form-control" id="nama_pptk" name="nama_pptk" required>
   </div>
   </div>
 </div>
@@ -149,16 +157,16 @@
   </div>
   <div class="card-body">
   <div class="col-12">
-    <label for="inputAddress" class="form-label">1. Nama :</label>
-    <input type="text" class="form-control" id="inputAddress" required >
+    <label for="nama" class="form-label">1. Nama :</label>
+    <input type="text" class="form-control" id="nama" name="nama" required >
   </div>
   <div class="col-12">
-    <label for="inputAddress2" class="form-label">2. Jabatan :</label>
-    <input type="text" class="form-control" id="inputAddress2" required>
+    <label for="jabatan" class="form-label">2. Jabatan :</label>
+    <input type="text" class="form-control" id="jabatan" name="jabatan" required>
   </div>
   <div class="col-12">
-    <label for="inputAddress2" class="form-label">3. Alamat :</label>
-    <input type="text" class="form-control" id="inputAddress2" required>
+    <label for="alamat" class="form-label">3. Alamat :</label>
+    <input type="text" class="form-control" id="alamat" name="alamat" required>
   </div>
   </div>
 </div>
@@ -218,12 +226,12 @@
   </div>
   <div class="card-body">
   <div class="col-12">
-    <label for="inputAddress" class="form-label">1. Nama Perusahaan :</label>
-    <input type="text" class="form-control" id="inputAddress" required >
+    <label for="nama_perusahaan" class="form-label">1. Nama Perusahaan :</label>
+    <input type="text" class="form-control" id="nama_perusahaan" name="nama_perusahaan" required >
   </div>
   <div class="col-12">
-    <label for="inputAddress2" class="form-label">2. Alamat Perusahaan :</label>
-    <input type="text" class="form-control" id="inputAddress2" required>
+    <label for="alamat_perusahaan" class="form-label">2. Alamat Perusahaan :</label>
+    <input type="text" class="form-control" id="alamat_perusahaan" required>
   </div>
   <div class="col-12">
     <label for="inputAddress2" class="form-label">3. Nama Pimpinan :</label>
