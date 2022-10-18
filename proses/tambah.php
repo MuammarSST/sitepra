@@ -34,25 +34,23 @@
 
   <div class="col-12">
     <label for="inputEmail4" class="form-label">NAMA PAKET :</label>
-    <input type="email" class="form-control" id="inputEmail4">
+    <input type="email" class="form-control" id="inputEmail4" required>
   </div>
   <div class="col-12">
     <label for="inputPassword4" class="form-label">ALAMAT :</label>
-    <input type="password" class="form-control" id="inputPassword4">
+    <input type="password" class="form-control" id="inputPassword4" required>
   </div>
 
   </div>
 </div>
 
 <div class="card">
-  <div class="card-header">
-    
-  </div>
+
   <div class="card-body">
 
     <div class="col-12">
       <label for="inputState" class="form-label">SKPK :</label>
-      <select id="inputState" class="form-select">
+      <select id="inputState" class="form-select" required>
         <option selected>--- PILIH SKPK ---</option>
         <option>...</option>
       </select>
@@ -60,37 +58,90 @@
 
     <div class="col-12">
       <label for="inputCity" class="form-label">KPA :</label>
-      <input type="text" class="form-control" id="inputCity">
+      <input type="text" class="form-control" id="inputCity" required>
     </div>
 
     <div class="col-12">
       <label for="inputZip" class="form-label">ALAMAT :</label>
-      <input type="text" class="form-control" id="inputZip">
+      <input type="text" class="form-control" id="inputZip" required>
     </div>
 
     </div>
 </div>
 
-    <div class="card">
+<div class="card">
   <div class="card-header">
     PENGELOLA ANGGARAN SKPK
   </div>
   <div class="card-body">
   <div class="col-12">
     <label for="inputAddress" class="form-label">1. Nama PA :</label>
-    <input type="text" class="form-control" id="inputAddress" >
+    <input type="text" class="form-control" id="inputAddress" required >
   </div>
   <div class="col-12">
     <label for="inputAddress2" class="form-label">2. Nama Bendahara :</label>
-    <input type="text" class="form-control" id="inputAddress2">
+    <input type="text" class="form-control" id="inputAddress2" required>
   </div>
   <div class="col-12">
     <label for="inputAddress2" class="form-label">3. Nama PPTK :</label>
-    <input type="text" class="form-control" id="inputAddress2">
+    <input type="text" class="form-control" id="inputAddress2" required>
   </div>
   </div>
 </div>
 
+<div class="card">
+  <div class="card-header">
+    PENGELOLA TEKNIS
+  </div>
+  <div class="card-body">
+  <table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">No.</th>
+      <th scope="col">Nama</th>
+      <th scope="col">Instansi Asal</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
+      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
+
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
+      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
+
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
+      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
+
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
+      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
+
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
+      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
+
+    </tr>
+  </tbody>
+
+</table>
+
+  </div>
+
+
+</div>
 
 <div class="card">
   <div class="card-header">
@@ -99,22 +150,66 @@
   <div class="card-body">
   <div class="col-12">
     <label for="inputAddress" class="form-label">1. Nama :</label>
-    <input type="text" class="form-control" id="inputAddress" >
+    <input type="text" class="form-control" id="inputAddress" required >
   </div>
   <div class="col-12">
     <label for="inputAddress2" class="form-label">2. Jabatan :</label>
-    <input type="text" class="form-control" id="inputAddress2">
+    <input type="text" class="form-control" id="inputAddress2" required>
   </div>
   <div class="col-12">
     <label for="inputAddress2" class="form-label">3. Alamat :</label>
-    <input type="text" class="form-control" id="inputAddress2">
+    <input type="text" class="form-control" id="inputAddress2" required>
   </div>
   </div>
 </div>
 
   
 
+<div class="card">
+  <div class="card-header">
+    TIM PROVISIONAL HAND OVER (PH0)
+  </div>
+  <div class="card-body">
+  <table class="table table-bordered">
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
+      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
 
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
+      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
+
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
+      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
+
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
+      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
+
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
+      <td> <input type="text" class="form-control" id="inputAddress" required ></td>
+
+    </tr>
+  </tbody>
+
+</table>
+
+  </div>
+
+
+</div>
   
 
   <div class="card">
@@ -124,23 +219,23 @@
   <div class="card-body">
   <div class="col-12">
     <label for="inputAddress" class="form-label">1. Nama Perusahaan :</label>
-    <input type="text" class="form-control" id="inputAddress" >
+    <input type="text" class="form-control" id="inputAddress" required >
   </div>
   <div class="col-12">
     <label for="inputAddress2" class="form-label">2. Alamat Perusahaan :</label>
-    <input type="text" class="form-control" id="inputAddress2">
+    <input type="text" class="form-control" id="inputAddress2" required>
   </div>
   <div class="col-12">
     <label for="inputAddress2" class="form-label">3. Nama Pimpinan :</label>
-    <input type="text" class="form-control" id="inputAddress2">
+    <input type="text" class="form-control" id="inputAddress2" required>
   </div>
   <div class="col-12">
     <label for="inputAddress2" class="form-label">4. Alamat Pimpinan :</label>
-    <input type="text" class="form-control" id="inputAddress2">
+    <input type="text" class="form-control" id="inputAddress2" required>
   </div>
   <div class="col-12">
     <label for="inputAddress2" class="form-label">5. Nilai Kontrak :</label>
-    <input type="text" class="form-control" id="inputAddress2">
+    <input type="text" class="form-control" id="inputAddress2" required>
   </div>
   </div>
 </div>
@@ -152,42 +247,111 @@
   <div class="card-body">
   <div class="col-12">
     <label for="inputAddress" class="form-label">1. Nama Perusahaan :</label>
-    <input type="text" class="form-control" id="inputAddress" >
+    <input type="text" class="form-control" id="inputAddress"required >
   </div>
   <div class="col-12">
     <label for="inputAddress2" class="form-label">2. Alamat Perusahaan :</label>
-    <input type="text" class="form-control" id="inputAddress2">
+    <input type="text" class="form-control" id="inputAddress2" required>
   </div>
   <div class="col-12">
     <label for="inputAddress2" class="form-label">3. Nama Pimpinan :</label>
-    <input type="text" class="form-control" id="inputAddress2">
+    <input type="text" class="form-control" id="inputAddress2" required>
   </div>
   <div class="col-12">
     <label for="inputAddress2" class="form-label">4. Alamat Pimpinan :</label>
-    <input type="text" class="form-control" id="inputAddress2">
+    <input type="text" class="form-control" id="inputAddress2" required>
   </div>
   <div class="col-12">
     <label for="inputAddress2" class="form-label">5. Nilai Kontrak :</label>
-    <input type="text" class="form-control" id="inputAddress2">
+    <input type="text" class="form-control" id="inputAddress2" required>
   </div>
   <div class="col-12">
     <label for="inputAddress2" class="form-label">6. Waktu (Tanggal) :</label>
-    <input type="text" class="form-control" id="inputAddress2">
+    <input type="text" class="form-control" id="inputAddress2" required>
   </div>
   <div class="col-12">
     <label for="inputAddress2" class="form-label">7. Pagu :</label>
-    <input type="text" class="form-control" id="inputAddress2">
+    <input type="text" class="form-control" id="inputAddress2" required>
   </div>
   <div class="col-12">
     <label for="inputAddress2" class="form-label">8. Sumber Dana :</label>
-    <input type="text" class="form-control" id="inputAddress2">
+    <input type="text" class="form-control" id="inputAddress2" required>
   </div>
   </div>
 </div>
 
+<div class="card">
+  <div class="card-header">
+    PROVISIONAL HAND OVER (PHO)
+  </div>
+  <div class="card-body">
+  <div class="col-12">
+    <label for="inputAddress" class="form-label">Nomor :</label>
+    <input type="text" class="form-control" id="inputAddress" required>
+  </div>
+  <div class="col-12">
+    <label for="inputAddress2" class="form-label">Tanggal :</label>
+    <input type="text" class="form-control" id="inputAddress2" required>
+  </div>
+
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    Hasil Akhir / Sementara
+  </div>
+  <div class="card-body">
+  <div class="col-12">
+    <input type="text" class="form-control" id="inputAddress" required>
+  </div>
+
+
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    Upload Foto Kondisi
+  </div>
+  <div class="card-body">
+  <label for="inputAddress2" class="form-label">Kondisi 1 :</label>
+  <div class="input-group">
+    <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+    <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Upload Foto Kondisi 1</button>
+  </div>
+  <label for="inputAddress2" class="form-label">Kondisi 2 :</label>
+  <div class="input-group">
+    <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+    <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Upload Foto Kondisi 2</button>
+  </div>
+  <label for="inputAddress2" class="form-label">Kondisi 3 :</label>
+  <div class="input-group">
+    <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+    <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Upload Foto Kondisi 3</button>
+  </div>
+  <label for="inputAddress2" class="form-label">Kondisi 4 :</label>
+  <div class="input-group">
+    <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+    <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Upload Foto Kondisi 4</button>
+  </div>
+  <label for="inputAddress2" class="form-label">Kondisi 5 :</label>
+  <div class="input-group">
+    <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+    <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Upload Foto Kondisi 5</button>
+  </div>
+  <label for="inputAddress2" class="form-label">Kondisi 6 :</label>
+  <div class="input-group">
+    <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+    <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Upload Foto Kondisi 6</button>
+  </div>
+
+
+  </div>
+</div>
 
   <div class="col-12">
-    <button type="submit" class="btn btn-primary">SIMPAN</button>
+    <input type="submit" class="btn btn-primary" value="SIMPAN">
   </div>
 </form>
 
