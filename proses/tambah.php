@@ -25,17 +25,32 @@
 <div class="container">
 
 <form class="row g-3">
-  <div class="col-md-6">
+  
+<div class="card">
+  <div class="card-header">
+    <h1> INPUT HASIL MONITORING DAN EVALUASI TEPRA PIDIE TAHUN 2022</h1>
+  </div>
+  <div class="card-body">
+
+  <div class="col-12">
     <label for="inputEmail4" class="form-label">NAMA PAKET :</label>
     <input type="email" class="form-control" id="inputEmail4">
   </div>
-  <div class="col-md-6">
+  <div class="col-12">
     <label for="inputPassword4" class="form-label">ALAMAT :</label>
     <input type="password" class="form-control" id="inputPassword4">
   </div>
 
+  </div>
+</div>
 
-    <div class="col-4">
+<div class="card">
+  <div class="card-header">
+    
+  </div>
+  <div class="card-body">
+
+    <div class="col-12">
       <label for="inputState" class="form-label">SKPK :</label>
       <select id="inputState" class="form-select">
         <option selected>--- PILIH SKPK ---</option>
@@ -43,17 +58,24 @@
       </select>
     </div>
 
-    <div class="col-4">
+    <div class="col-12">
       <label for="inputCity" class="form-label">KPA :</label>
       <input type="text" class="form-control" id="inputCity">
     </div>
 
-    <div class="col-4">
+    <div class="col-12">
       <label for="inputZip" class="form-label">ALAMAT :</label>
       <input type="text" class="form-control" id="inputZip">
     </div>
 
+    </div>
+</div>
 
+    <div class="card">
+  <div class="card-header">
+    PENGELOLA ANGGARAN SKPK
+  </div>
+  <div class="card-body">
   <div class="col-12">
     <label for="inputAddress" class="form-label">1. Nama PA :</label>
     <input type="text" class="form-control" id="inputAddress" >
@@ -66,21 +88,40 @@
     <label for="inputAddress2" class="form-label">3. Nama PPTK :</label>
     <input type="text" class="form-control" id="inputAddress2">
   </div>
+  </div>
+</div>
 
-  
-  <div class="col-4">
+
+<div class="card">
+  <div class="card-header">
+    PENGGUNA / PENERIMA
+  </div>
+  <div class="card-body">
+  <div class="col-12">
     <label for="inputAddress" class="form-label">1. Nama :</label>
     <input type="text" class="form-control" id="inputAddress" >
   </div>
-  <div class="col-4">
+  <div class="col-12">
     <label for="inputAddress2" class="form-label">2. Jabatan :</label>
     <input type="text" class="form-control" id="inputAddress2">
   </div>
-  <div class="col-4">
+  <div class="col-12">
     <label for="inputAddress2" class="form-label">3. Alamat :</label>
     <input type="text" class="form-control" id="inputAddress2">
   </div>
+  </div>
+</div>
 
+  
+
+
+  
+
+  <div class="card">
+  <div class="card-header">
+    PERENCANAAN 
+  </div>
+  <div class="card-body">
   <div class="col-12">
     <label for="inputAddress" class="form-label">1. Nama Perusahaan :</label>
     <input type="text" class="form-control" id="inputAddress" >
@@ -101,8 +142,48 @@
     <label for="inputAddress2" class="form-label">5. Nilai Kontrak :</label>
     <input type="text" class="form-control" id="inputAddress2">
   </div>
+  </div>
+</div>
 
-
+<div class="card">
+  <div class="card-header">
+    PELAKSANA FISIK
+  </div>
+  <div class="card-body">
+  <div class="col-12">
+    <label for="inputAddress" class="form-label">1. Nama Perusahaan :</label>
+    <input type="text" class="form-control" id="inputAddress" >
+  </div>
+  <div class="col-12">
+    <label for="inputAddress2" class="form-label">2. Alamat Perusahaan :</label>
+    <input type="text" class="form-control" id="inputAddress2">
+  </div>
+  <div class="col-12">
+    <label for="inputAddress2" class="form-label">3. Nama Pimpinan :</label>
+    <input type="text" class="form-control" id="inputAddress2">
+  </div>
+  <div class="col-12">
+    <label for="inputAddress2" class="form-label">4. Alamat Pimpinan :</label>
+    <input type="text" class="form-control" id="inputAddress2">
+  </div>
+  <div class="col-12">
+    <label for="inputAddress2" class="form-label">5. Nilai Kontrak :</label>
+    <input type="text" class="form-control" id="inputAddress2">
+  </div>
+  <div class="col-12">
+    <label for="inputAddress2" class="form-label">6. Waktu (Tanggal) :</label>
+    <input type="text" class="form-control" id="inputAddress2">
+  </div>
+  <div class="col-12">
+    <label for="inputAddress2" class="form-label">7. Pagu :</label>
+    <input type="text" class="form-control" id="inputAddress2">
+  </div>
+  <div class="col-12">
+    <label for="inputAddress2" class="form-label">8. Sumber Dana :</label>
+    <input type="text" class="form-control" id="inputAddress2">
+  </div>
+  </div>
+</div>
 
 
   <div class="col-12">
