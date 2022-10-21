@@ -1,4 +1,23 @@
-<?php require_once 'proses\data.php'
+<?php
+error_reporting(E_ALL);
+$servername="localhost";
+$username="root";
+$password="";
+$dbname="sitepra";
+
+$conn=new mysqli($servername,$username,$password,$dbname);
+
+if($conn->connect_error){
+	die("Connection Failed".$conn->connect_error);
+}else{
+	//echo "connected";
+}
+$query = "SELECT * FROM laporan";
+$result = mysqli_query($conn,$query);
+if (!$result) {
+  die('Invalid query: ' . mysqli_error());
+}
+
 ?>
 
 <!doctype html>
@@ -49,7 +68,7 @@
 	<?php 
 	$i=0;
 	while ($row = @mysqli_fetch_assoc($result)){
-		$id_peta=$row['id_peta'];
+		$id_paket=$row['id_paket'];
 		$nama_peta=$row['nama_paket'];
 		$alamat_peta=$row['alamat_paket'];
 		$lat=$row['latitude'];
@@ -57,17 +76,23 @@
 		$i++;
 	?>
 	<tr>
-      <th scope="row"><?php echo $id_peta ?></th>
+      <th scope="row"><?php echo $id_paket ?></th>
       <td><?php echo $nama_peta ?></td>
 	   <td><?php echo $alamat_peta ?></td>
       <td><?php echo $lat ?></td>
       <td><?php echo $long ?></td>
 	  <td>
-		  <form method="POST"  target="_blank" action="lihat_peta.php">
+		  <form method="POST"  target="_blank" action="../../lihat_peta.php">
 			<input type="hidden" name="latitude" value="<?php echo $lat ?>">
 			<input type="hidden" name="longitude" value="<?php echo $long ?>">
-			<input type="submit" name="submit_coordinates" value="Lihat Peta">
+			<input type="submit" name="submit_coordinates" value="Lihat Peta" class ="btn btn-success">
 		</form>
+    <br>
+    <form method="POST" action="/proses/edit.php" >
+			<input type="hidden" name="id_paket" value="<?php echo $id_paket ?>">
+			<input type="submit" name="edit_paket" value="Edit Data" class ="btn btn-warning">
+		</form>
+
 	 </td>
 	
     </tr>
