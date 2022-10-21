@@ -18,7 +18,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="#">Beranda</a>
+        <a class="nav-link active" aria-current="page" href="/sitepra/">Beranda</a>
         <a class="nav-link" href="#">Download</a>
         <a class="nav-link" href="#">Signout</a>
       </div>
@@ -37,8 +37,8 @@
   <thead>
     <tr>
       <th scope="col">No</th>
-      <th scope="col">Nama</th>
-	  <th scope="col">Alamat</th>
+      <th scope="col">Nama Paket</th>
+	  <th scope="col">Alamat Paket</th>
       <th scope="col">Latitude</th>
       <th scope="col">Longitude</th>
 	   <th scope="col">Aksi</th>
@@ -50,10 +50,10 @@
 	$i=0;
 	while ($row = @mysqli_fetch_assoc($result)){
 		$id_peta=$row['id_peta'];
-		$nama_peta=$row['nama_peta'];
-		$alamat_peta=$row['alamat_peta'];
-		$lat=$row['lat'];
-		$long=$row['long'];
+		$nama_peta=$row['nama_paket'];
+		$alamat_peta=$row['alamat_paket'];
+		$lat=$row['latitude'];
+		$long=$row['longitude'];
 		$i++;
 	?>
 	<tr>
