@@ -37,8 +37,8 @@
     <input type="text" class="form-control" id="nama_paket" name="nama_paket" required>
   </div>
   <div class="col-12">
-    <label for="alamat" class="form-label">ALAMAT :</label>
-    <input type="text" class="form-control" id="alamat" name="alamat" required>
+    <label for="alamat_paket" class="form-label">ALAMAT :</label>
+    <input type="text" class="form-control" id="alamat_paket" name="alamat_paket" required>
   </div>
   <div class="col-12">
     <label for="latitude" class="form-label">Latitude :</label>

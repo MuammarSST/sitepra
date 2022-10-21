@@ -1,7 +1,7 @@
 <?php
 if(isset($_POST['Simpan'])){
     $nama_paket = $_POST['nama_paket'];
-    $alamat = $_POST['alamat'];
+    $alamat_paket = $_POST['alamat_paket'];
     $latitude = $_POST['latitude'];
     $longitude = $_POST['longitude'];
 
@@ -68,10 +68,56 @@ if(isset($_POST['Simpan'])){
 
     $ha = $_POST['ha'];
 
+    error_reporting(E_ALL);
+    $servername="localhost";
+    $username="root";
+    $password="";
+    $dbname="sitepra";
 
- 
-    
-    if($hasil){
+    $conn=new mysqli($servername,$username,$password,$dbname);
+
+    if($conn->connect_error){
+        die("Connection Failed".$conn->connect_error);
+    }else{
+        //echo "connected";
+    }
+    $query = 
+    "INSERT INTO laporan (
+        '$nama_paket',
+        '$alamat_paket',
+        '$latitude',
+        '$longitude',
+        '$skpk_id',
+        '$kpa',
+        '$alamat_skpk',
+        '$nama_pa',
+        '$nama_bendahara',
+        '$nama_pptk',
+        '$pl_nama_1',
+        '$pl_instasi_asal_1',
+        '$pl_nama_2',
+        '$pl_instasi_asal_2',
+        '$pl_nama_3',
+        '$pl_instasi_asal_3',
+        '$pl_nama_4',
+        '$pl_instasi_asal_4',
+        '$pl_nama_5',
+        '$pl_instasi_asal_5',
+        '$nama',
+        '$jabatan',
+        '$alamat',
+        '$pho_nama_1',
+        '$pho_instasi_asal_1',
+        '$pho_nama_2',
+        '$pho_instasi_asal_2',
+        '$pho_nama_3','$','$','$','$','$','$','$','$') VALUES ('')"
+    ;
+    $result = mysqli_query($conn,$query);
+    if (!$result) {
+    die('Invalid query: ' . mysqli_error());
+    }
+
+    if($query){
     header('Location: index.php');
     }
 }

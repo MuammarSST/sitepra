@@ -12,7 +12,7 @@ if($conn->connect_error){
 }else{
 	//echo "connected";
 }
-$query = "SELECT * FROM peta";
+$query = "SELECT * FROM laporan";
 $result = mysqli_query($conn,$query);
 if (!$result) {
   die('Invalid query: ' . mysqli_error());
