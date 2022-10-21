@@ -1,3 +1,36 @@
+<?php
+error_reporting(E_ALL);
+$servername="localhost";
+$username="root";
+$password="";
+$dbname="sitepra";
+
+$conn=new mysqli($servername,$username,$password,$dbname);
+
+if($conn->connect_error){
+	die("Connection Failed".$conn->connect_error);
+}else{
+	//echo "connected";
+}
+if(isset($_POST['edit_paket'])){
+  $post_id_paket = $_POST['id_paket'];
+}
+
+$query = "SELECT * FROM laporan where id_paket = '$post_id_paket' ";
+$result = mysqli_query($conn,$query);
+if (!$result) {
+  die('Invalid query: ' . mysqli_error());
+}
+$row = @mysqli_fetch_assoc($result);
+  $id_paket=$row['id_paket'];
+  $nama_peta=$row['nama_paket'];
+  $alamat_peta=$row['alamat_paket'];
+  $lat=$row['latitude'];
+  $long=$row['longitude'];
+
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -34,7 +67,7 @@
 
   <div class="col-12">
     <label for="nama_paket" class="form-label">NAMA PAKET :</label>
-    <input type="text" class="form-control" id="nama_paket" name="nama_paket" required>
+    <input type="text" class="form-control" id="nama_paket" name="nama_paket"  value="<?php echo $nama_paket ?> required>
   </div>
   <div class="col-12">
     <label for="alamat_paket" class="form-label">ALAMAT :</label>

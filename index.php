@@ -49,7 +49,7 @@ if (!$result) {
 	
 	<div class="container">
 	<br>
-	<a href="proses/tambah.php" class="btn btn-primary">Tambah Data</a>
+	<a href="tambah.php" class="btn btn-primary">Tambah Data</a>
 
     
 <table class="table" >
@@ -82,13 +82,13 @@ if (!$result) {
       <td><?php echo $lat ?></td>
       <td><?php echo $long ?></td>
 	  <td>
-		  <form method="POST"  target="_blank" action="../../lihat_peta.php">
+		  <form method="POST"  target="_blank" action="lihat_peta.php">
 			<input type="hidden" name="latitude" value="<?php echo $lat ?>">
 			<input type="hidden" name="longitude" value="<?php echo $long ?>">
 			<input type="submit" name="submit_coordinates" value="Lihat Peta" class ="btn btn-success">
 		</form>
     <br>
-    <form method="POST" action="/proses/edit.php" >
+    <form method="POST" action="edit.php" >
 			<input type="hidden" name="id_paket" value="<?php echo $id_paket ?>">
 			<input type="submit" name="edit_paket" value="Edit Data" class ="btn btn-warning">
 		</form>
