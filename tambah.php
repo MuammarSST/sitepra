@@ -46,17 +46,6 @@ if (!$result_skpk) {
   </div>
 </nav>
 <div class="container">
-<?php
-        //Validasi untuk menampilkan pesan pemberitahuan
-        if (isset($_GET['add'])) {
-      
-            if ($_GET['add']=='berhasil'){
-                echo"<div class='alert alert-success'><strong>Berhasil!</strong> Data berhasil disimpan!</div>";
-            }else if ($_GET['add']=='gagal'){
-                echo"<div class='alert alert-danger'><strong>Gagal!</strong> Data Gagal disimpan!</div>";
-            }    
-        }
-        ?>
 
 <form class="row g-3" method="post" action="simpan_tambah.php" enctype="multipart/form-data">
   
@@ -413,8 +402,8 @@ if (!$result_skpk) {
   <div class="card-body">
   <label for="kondisi_1" class="form-label">Kondisi 1 :</label>
   <div class="input-group">
-    <input type="file" class="form-control" id="kondisi_1" name="kondisi_1" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-    <button class="btn btn-outline-secondary" type="button" id="simpan_kondisi_1">Upload Foto Kondisi 1</button>  
+    <input type="file" class="form-control" id="kondisi_1" name="kondisi_1" aria-describedby="inputGroupFileAddon04" aria-label="Upload" onchange="readURL1(this);">
+    
   </div>
   <div>
   <img src="foto/80x80.png" id="preview_1" class="img-thumbnail">
@@ -422,8 +411,8 @@ if (!$result_skpk) {
 
   <label for="kondisi_2" class="form-label">Kondisi 2 :</label>
   <div class="input-group">
-    <input type="file" class="form-control" id="kondisi_2" name="kondisi_2" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-    <button class="btn btn-outline-secondary" type="button" id="simpan_kondisi_2">Upload Foto Kondisi 2</button>
+    <input type="file" class="form-control" id="kondisi_2" name="kondisi_2" aria-describedby="inputGroupFileAddon04" aria-label="Upload" onchange="readURL2(this);">
+    
   </div>
   <div>
     <img src="foto/80x80.png" id="preview_2" class="img-thumbnail">
@@ -431,8 +420,8 @@ if (!$result_skpk) {
 
   <label for="kondisi_3" class="form-label">Kondisi 3 :</label>
   <div class="input-group">
-    <input type="file" class="form-control" id="kondisi_3" name="kondisi_3" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-    <button class="btn btn-outline-secondary" type="button" id="simpan_kondisi_3">Upload Foto Kondisi 3</button>
+    <input type="file" class="form-control" id="kondisi_3" name="kondisi_3" aria-describedby="inputGroupFileAddon04" aria-label="Upload" onchange="readURL3(this);">
+    
   </div>
   <div>
     <img src="foto/80x80.png" id="preview_3" class="img-thumbnail">
@@ -440,8 +429,8 @@ if (!$result_skpk) {
 
   <label for="kondisi_4" class="form-label">Kondisi 4 :</label>
   <div class="input-group">
-    <input type="file" class="form-control" id="kondisi_4" name="kondisi_4" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-    <button class="btn btn-outline-secondary" type="button" id="simpan_kondisi_4">Upload Foto Kondisi 4</button>
+    <input type="file" class="form-control" id="kondisi_4" name="kondisi_4" aria-describedby="inputGroupFileAddon04" aria-label="Upload" onchange="readURL4(this);">
+  
   </div>
   <div>
     <img src="foto/80x80.png" id="preview_4" class="img-thumbnail">
@@ -449,8 +438,8 @@ if (!$result_skpk) {
 
   <label for="kondisi_5" class="form-label">Kondisi 5 :</label>
   <div class="input-group">
-    <input type="file" class="form-control" id="kondisi_5" name="kondisi_5" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-    <button class="btn btn-outline-secondary" type="button" id="simpan_kondisi_5">Upload Foto Kondisi 5</button>
+    <input type="file" class="form-control" id="kondisi_5" name="kondisi_5" aria-describedby="inputGroupFileAddon04" aria-label="Upload" onchange="readURL5(this);">
+   
   </div>
   <div>
     <img src="foto/80x80.png" id="preview_5" class="img-thumbnail">
@@ -458,8 +447,8 @@ if (!$result_skpk) {
 
   <label for="kondisi_6" class="form-label">Kondisi 6 :</label>
   <div class="input-group">
-    <input type="file" class="form-control" id="kondisi_6" name="kondisi_6" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-    <button class="btn btn-outline-secondary" type="button" id="simpan_kondisi_6">Upload Foto Kondisi 6</button>
+    <input type="file" class="form-control" id="kondisi_6" name="kondisi_6" aria-describedby="inputGroupFileAddon04" aria-label="Upload" onchange="readURL6(this);">
+    
   </div>
   <div>
     <img src="foto/80x80.png" id="preview_6" class="img-thumbnail">
@@ -470,122 +459,79 @@ if (!$result_skpk) {
 </div>
 
   <div class="col-12">
-    <input type="submit" class="btn btn-primary" value="Simpan">
+    <input type="submit" class="btn btn-primary" name="submit"> 
   </div>
 </form>
 
 </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-    <script>
+    <script type="text/javascript">
+    function readURL1(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
 
+            reader.onload = function (e) {
+                $('#preview_1').attr('src', e.target.result);
+            }
 
-//awal
-$(document).on("click", "#simpan_kondisi_1", function() {
-var file1 = $(this).parents().find(".file");
-file1.trigger("click");
-});
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    function readURL2(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
 
-$('input[type="file"]').change(function(e) {
-var fileName1 = e.target.files[0].name;
-$("#kondisi_1").val(fileName1);
+            reader.onload = function (e) {
+                $('#preview_2').attr('src', e.target.result);
+            }
 
-var reader1 = new FileReader();
-reader1.onload = function(e) {
-    document.getElementById("preview_1").src = e.target.result;
-};
-reader1.readAsDataURL(this.files[0]);
-});
-//akhir
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    function readURL3(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
 
-//awal
-$(document).on("click", "#simpan_kondisi_2", function() {
-var file2 = $(this).parents().find(".file");
-file2.trigger("click");
-});
+            reader.onload = function (e) {
+                $('#preview_3').attr('src', e.target.result);
+            }
 
-$('input[type="file"]').change(function(e) {
-var fileName2 = e.target.files[0].name;
-$("#kondisi_2").val(fileName2);
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    function readURL4(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
 
-var reader = new FileReader();
-reader2.onload = function(e) {
-    document.getElementById("preview2").src = e.target.result;
-};
-reader2.readAsDataURL(this.files[0]);
-});
-//akhir
+            reader.onload = function (e) {
+                $('#preview_4').attr('src', e.target.result);
+            }
 
-//awal 
-$(document).on("click", "#simpan_kondisi_3", function() {
-var file3 = $(this).parents().find(".file");
-file3.trigger("click");
-});
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    function readURL5(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
 
-$('input[type="file"]').change(function(e) {
-var fileName3 = e.target.files[0].name;
-$("#kondisi_3").val(fileName3);
+            reader.onload = function (e) {
+                $('#preview_5').attr('src', e.target.result);
+            }
 
-var reader3 = new FileReader();
-reader3.onload = function(e) {
-    document.getElementById("preview3").src = e.target.result;
-};
-reader3.readAsDataURL(this.files[0]);
-});
-//akhir
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    function readURL6(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
 
-//awal
-$(document).on("click", "#simpan_kondisi_4", function() {
-var file4 = $(this).parents().find(".file");
-file4.trigger("click");
-});
+            reader.onload = function (e) {
+                $('#preview_6').attr('src', e.target.result);
+            }
 
-$('input[type="file"]').change(function(e) {
-var fileName4 = e.target.files[0].name;
-$("#kondisi_4").val(fileName4);
-
-var reader4 = new FileReader();
-reader4.onload = function(e) {
-    document.getElementById("preview_4").src = e.target.result;
-};
-reader4.readAsDataURL(this.files[0]);
-});
-//akhir
-
-//awal
-$(document).on("click", "#simpan_kondisi_5", function() {
-var file5 = $(this).parents().find(".file");
-file5.trigger("click");
-});
-
-$('input[type="file"]').change(function(e) {
-var fileName2 = e.target.files[0].name;
-$("#kondisi_2").val(fileName2);
-
-var reader5 = new FileReader();
-reader5.onload = function(e) {
-    document.getElementById("preview5").src = e.target.result;
-};
-reader5.readAsDataURL(this.files[0]);
-});
-//akhir
-
-//awal 
-$(document).on("click", "#simpan_kondisi_6", function() {
-var file6 = $(this).parents().find(".file");
-file6.trigger("click");
-});
-
-$('input[type="file"]').change(function(e) {
-var fileName6 = e.target.files[0].name;
-$("#kondisi_6").val(fileName6);
-
-var reader6 = new FileReader();
-reader6.onload = function(e) {
-    document.getElementById("preview6").src = e.target.result;
-};
-reader6.readAsDataURL(this.files[0]);
-});
-//akhir
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
 
 </script>
   </body>
