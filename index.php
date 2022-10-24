@@ -12,11 +12,14 @@ if($conn->connect_error){
 }else{
 	//echo "connected";
 }
-$query = "SELECT * FROM laporan";
-$result = mysqli_query($conn,$query);
-if (!$result) {
+
+
+$query_laporan = "SELECT * FROM laporan";
+$result_laporan = mysqli_query($conn,$query_laporan);
+if (!$result_laporan) {
   die('Invalid query: ' . mysqli_error());
 }
+
 
 ?>
 
@@ -67,7 +70,7 @@ if (!$result) {
     
 	<?php 
 	$i=0;
-	while ($row = @mysqli_fetch_assoc($result)){
+	while ($row = @mysqli_fetch_assoc($result_laporan)){
 		$id_paket=$row['id_paket'];
 		$nama_peta=$row['nama_paket'];
 		$alamat_peta=$row['alamat_paket'];

@@ -1,3 +1,25 @@
+<?php
+error_reporting(E_ALL);
+$servername="localhost";
+$username="root";
+$password="";
+$dbname="sitepra";
+
+$conn=new mysqli($servername,$username,$password,$dbname);
+
+if($conn->connect_error){
+	die("Connection Failed".$conn->connect_error);
+}else{
+	//echo "connected";
+}
+
+
+$query_skpk = "SELECT * FROM skpk";
+$result_skpk = mysqli_query($conn,$query_skpk);
+if (!$result_skpk) {
+  die('Invalid query: ' . mysqli_error());
+}
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -5,7 +27,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SITEPRA</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-</head>
+    <script src="js/jquery-3.4.1.js"></script>
+  </head>
   <body>
 <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
@@ -23,8 +46,19 @@
   </div>
 </nav>
 <div class="container">
+<?php
+        //Validasi untuk menampilkan pesan pemberitahuan
+        if (isset($_GET['add'])) {
+      
+            if ($_GET['add']=='berhasil'){
+                echo"<div class='alert alert-success'><strong>Berhasil!</strong> Data berhasil disimpan!</div>";
+            }else if ($_GET['add']=='gagal'){
+                echo"<div class='alert alert-danger'><strong>Gagal!</strong> Data Gagal disimpan!</div>";
+            }    
+        }
+        ?>
 
-<form class="row g-3" method="post" action="proses/simpan_tambah.php">
+<form class="row g-3" method="post" action="simpan_tambah.php" enctype="multipart/form-data">
   
 <div class="card">
   <div class="card-header">
@@ -59,8 +93,19 @@
     <div class="col-12">
       <label for="skpk_id" class="form-label">SKPK :</label>
       <select id="skpk_id" name="skpk_id" class="form-select" required>
-        <option selected>--- PILIH SKPK ---</option>
-        <option>...</option>
+        
+        <?php
+        	$i=0;
+          while ($row = @mysqli_fetch_assoc($result_skpk)){
+   
+            $id_skpk=$row['id_skpk'];
+            $nama_skpk=$row['nama_skpk'];
+
+          ?>
+           <option value="<?php echo $id_skpk;?>"><?php echo $nama_skpk;?></option>
+          <?php 
+         $i++;
+        } ?>
       </select>
     </div>
 
@@ -318,7 +363,7 @@
   </div>
   <div class="col-12">
     <label for="pf_tanggal" class="form-label">6. Waktu (Tanggal) :</label>
-    <input type="date" class="form-control" id="pf_tanggal" name="pf_tanggal" required>
+    <input type="text" class="form-control" id="pf_tanggal" name="pf_tanggal" required>
   </div>
   <div class="col-12">
     <label for="pf_pagu" class="form-label">7. Pagu :</label>
@@ -369,32 +414,55 @@
   <label for="kondisi_1" class="form-label">Kondisi 1 :</label>
   <div class="input-group">
     <input type="file" class="form-control" id="kondisi_1" name="kondisi_1" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-    <button class="btn btn-outline-secondary" type="button" id="simpan_kondisi_1">Upload Foto Kondisi 1</button>
+    <button class="btn btn-outline-secondary" type="button" id="simpan_kondisi_1">Upload Foto Kondisi 1</button>  
   </div>
+  <div>
+  <img src="foto/80x80.png" id="preview_1" class="img-thumbnail">
+  </div>
+
   <label for="kondisi_2" class="form-label">Kondisi 2 :</label>
   <div class="input-group">
     <input type="file" class="form-control" id="kondisi_2" name="kondisi_2" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
     <button class="btn btn-outline-secondary" type="button" id="simpan_kondisi_2">Upload Foto Kondisi 2</button>
   </div>
+  <div>
+    <img src="foto/80x80.png" id="preview_2" class="img-thumbnail">
+  </div>
+
   <label for="kondisi_3" class="form-label">Kondisi 3 :</label>
   <div class="input-group">
     <input type="file" class="form-control" id="kondisi_3" name="kondisi_3" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
     <button class="btn btn-outline-secondary" type="button" id="simpan_kondisi_3">Upload Foto Kondisi 3</button>
   </div>
+  <div>
+    <img src="foto/80x80.png" id="preview_3" class="img-thumbnail">
+  </div>
+
   <label for="kondisi_4" class="form-label">Kondisi 4 :</label>
   <div class="input-group">
     <input type="file" class="form-control" id="kondisi_4" name="kondisi_4" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
     <button class="btn btn-outline-secondary" type="button" id="simpan_kondisi_4">Upload Foto Kondisi 4</button>
   </div>
+  <div>
+    <img src="foto/80x80.png" id="preview_4" class="img-thumbnail">
+  </div>
+
   <label for="kondisi_5" class="form-label">Kondisi 5 :</label>
   <div class="input-group">
     <input type="file" class="form-control" id="kondisi_5" name="kondisi_5" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
     <button class="btn btn-outline-secondary" type="button" id="simpan_kondisi_5">Upload Foto Kondisi 5</button>
   </div>
+  <div>
+    <img src="foto/80x80.png" id="preview_5" class="img-thumbnail">
+  </div>
+
   <label for="kondisi_6" class="form-label">Kondisi 6 :</label>
   <div class="input-group">
     <input type="file" class="form-control" id="kondisi_6" name="kondisi_6" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
     <button class="btn btn-outline-secondary" type="button" id="simpan_kondisi_6">Upload Foto Kondisi 6</button>
+  </div>
+  <div>
+    <img src="foto/80x80.png" id="preview_6" class="img-thumbnail">
   </div>
 
 
@@ -408,5 +476,117 @@
 
 </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-</body>
+    <script>
+
+
+//awal
+$(document).on("click", "#simpan_kondisi_1", function() {
+var file1 = $(this).parents().find(".file");
+file1.trigger("click");
+});
+
+$('input[type="file"]').change(function(e) {
+var fileName1 = e.target.files[0].name;
+$("#kondisi_1").val(fileName1);
+
+var reader1 = new FileReader();
+reader1.onload = function(e) {
+    document.getElementById("preview_1").src = e.target.result;
+};
+reader1.readAsDataURL(this.files[0]);
+});
+//akhir
+
+//awal
+$(document).on("click", "#simpan_kondisi_2", function() {
+var file2 = $(this).parents().find(".file");
+file2.trigger("click");
+});
+
+$('input[type="file"]').change(function(e) {
+var fileName2 = e.target.files[0].name;
+$("#kondisi_2").val(fileName2);
+
+var reader = new FileReader();
+reader2.onload = function(e) {
+    document.getElementById("preview2").src = e.target.result;
+};
+reader2.readAsDataURL(this.files[0]);
+});
+//akhir
+
+//awal 
+$(document).on("click", "#simpan_kondisi_3", function() {
+var file3 = $(this).parents().find(".file");
+file3.trigger("click");
+});
+
+$('input[type="file"]').change(function(e) {
+var fileName3 = e.target.files[0].name;
+$("#kondisi_3").val(fileName3);
+
+var reader3 = new FileReader();
+reader3.onload = function(e) {
+    document.getElementById("preview3").src = e.target.result;
+};
+reader3.readAsDataURL(this.files[0]);
+});
+//akhir
+
+//awal
+$(document).on("click", "#simpan_kondisi_4", function() {
+var file4 = $(this).parents().find(".file");
+file4.trigger("click");
+});
+
+$('input[type="file"]').change(function(e) {
+var fileName4 = e.target.files[0].name;
+$("#kondisi_4").val(fileName4);
+
+var reader4 = new FileReader();
+reader4.onload = function(e) {
+    document.getElementById("preview_4").src = e.target.result;
+};
+reader4.readAsDataURL(this.files[0]);
+});
+//akhir
+
+//awal
+$(document).on("click", "#simpan_kondisi_5", function() {
+var file5 = $(this).parents().find(".file");
+file5.trigger("click");
+});
+
+$('input[type="file"]').change(function(e) {
+var fileName2 = e.target.files[0].name;
+$("#kondisi_2").val(fileName2);
+
+var reader5 = new FileReader();
+reader5.onload = function(e) {
+    document.getElementById("preview5").src = e.target.result;
+};
+reader5.readAsDataURL(this.files[0]);
+});
+//akhir
+
+//awal 
+$(document).on("click", "#simpan_kondisi_6", function() {
+var file6 = $(this).parents().find(".file");
+file6.trigger("click");
+});
+
+$('input[type="file"]').change(function(e) {
+var fileName6 = e.target.files[0].name;
+$("#kondisi_6").val(fileName6);
+
+var reader6 = new FileReader();
+reader6.onload = function(e) {
+    document.getElementById("preview6").src = e.target.result;
+};
+reader6.readAsDataURL(this.files[0]);
+});
+//akhir
+
+</script>
+  </body>
 </html>
