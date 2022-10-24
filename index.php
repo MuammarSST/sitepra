@@ -40,7 +40,7 @@ if (!$result_laporan) {
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="/sitepra/">Beranda</a>
+        <a class="nav-link active" aria-current="page" href="/sitepra">Beranda</a>
         <a class="nav-link" href="#">Download</a>
         <a class="nav-link" href="#">Signout</a>
       </div>
@@ -94,6 +94,11 @@ if (!$result_laporan) {
     <form method="POST" action="edit.php" >
 			<input type="hidden" name="id_paket" value="<?php echo $id_paket ?>">
 			<input type="submit" name="edit_paket" value="Edit Data" class ="btn btn-warning">
+		</form>
+<br>
+    <form method="POST" action="foto.php" >
+			<input type="hidden" name="id_paket" value="<?php echo $id_paket ?>">
+			<input type="submit" name="edit_paket" value="Upload Foto" class ="btn btn-info">
 		</form>
 
 	 </td>
