@@ -1,25 +1,21 @@
 <?php
-error_reporting(E_ALL);
-$servername="localhost";
-$username="root";
-$password="";
-$dbname="sitepra";
+include('koneksi.php');
 
-$conn=new mysqli($servername,$username,$password,$dbname);
-
-if($conn->connect_error){
-	die("Connection Failed".$conn->connect_error);
-}else{
-	//echo "connected";
+if(isset($_POST['edit_paket'])){
+  $post_id_paket = $_POST['id_paket'];
 }
 
-
-$query_skpk = "SELECT * FROM skpk";
-$result_skpk = mysqli_query($conn,$query_skpk);
-if (!$result_skpk) {
-  die('Invalid query: ' . mysqli_error());
+$query = "SELECT * FROM laporan where id_paket = '$post_id_paket' ";
+$result = mysqli_query($conn,$query);
+if (!$result) {
+  die('Invalid query: ' .$mysqli->error);
 }
+$row = @mysqli_fetch_assoc($result);
+
+
+
 ?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -30,32 +26,18 @@ if (!$result_skpk) {
     <script src="js/jquery-3.4.1.js"></script>
   </head>
   <body>
-<nav class="navbar navbar-expand-lg bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">SITEPRA</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="../">Beranda</a>
-        <a class="nav-link" href="#">Download</a>
-        <a class="nav-link" href="#">Signout</a>
-      </div>
-    </div>
-  </div>
-</nav>
+  <?php include('nav.php');?>
 <div class="container">
 
 <form class="row g-3" method="post" action="upload_foto.php" enctype="multipart/form-data">
+<input type="hidden" id="id_paket" name="id_paket"  value="<?php echo $row['id_paket']; ?>" >
   
 <div class="card">
   <div class="card-header">
-    <h1> INPUT HASIL MONITORING DAN EVALUASI TEPRA PIDIE TAHUN 2022</h1>
+    <h1> <?php echo $row['nama_paket']; ?></h1>
   </div>
 
 
-  
 
 <div class="card">
   <div class="card-header">
@@ -64,7 +46,7 @@ if (!$result_skpk) {
   <div class="card-body">
   <label for="kondisi_1" class="form-label">Kondisi 1 :</label>
   <div class="input-group">
-    <input type="file" class="form-control" id="kondisi_1" name="kondisi_1" aria-describedby="inputGroupFileAddon04" aria-label="Upload" onchange="readURL1(this);">
+    <input type="file" class="form-control" id="kondisi_1" name="kondisi_1" aria-describedby="inputGroupFileAddon04" aria-label="Upload" onchange="readURL1(this);" required>
     
   </div>
   <div>
@@ -73,7 +55,7 @@ if (!$result_skpk) {
 
   <label for="kondisi_2" class="form-label">Kondisi 2 :</label>
   <div class="input-group">
-    <input type="file" class="form-control" id="kondisi_2" name="kondisi_2" aria-describedby="inputGroupFileAddon04" aria-label="Upload" onchange="readURL2(this);">
+    <input type="file" class="form-control" id="kondisi_2" name="kondisi_2" aria-describedby="inputGroupFileAddon04" aria-label="Upload" onchange="readURL2(this);" required>
     
   </div>
   <div>
@@ -82,7 +64,7 @@ if (!$result_skpk) {
 
   <label for="kondisi_3" class="form-label">Kondisi 3 :</label>
   <div class="input-group">
-    <input type="file" class="form-control" id="kondisi_3" name="kondisi_3" aria-describedby="inputGroupFileAddon04" aria-label="Upload" onchange="readURL3(this);">
+    <input type="file" class="form-control" id="kondisi_3" name="kondisi_3" aria-describedby="inputGroupFileAddon04" aria-label="Upload" onchange="readURL3(this);" required>
     
   </div>
   <div>
@@ -91,7 +73,7 @@ if (!$result_skpk) {
 
   <label for="kondisi_4" class="form-label">Kondisi 4 :</label>
   <div class="input-group">
-    <input type="file" class="form-control" id="kondisi_4" name="kondisi_4" aria-describedby="inputGroupFileAddon04" aria-label="Upload" onchange="readURL4(this);">
+    <input type="file" class="form-control" id="kondisi_4" name="kondisi_4" aria-describedby="inputGroupFileAddon04" aria-label="Upload" onchange="readURL4(this);" required>
   
   </div>
   <div>
@@ -100,7 +82,7 @@ if (!$result_skpk) {
 
   <label for="kondisi_5" class="form-label">Kondisi 5 :</label>
   <div class="input-group">
-    <input type="file" class="form-control" id="kondisi_5" name="kondisi_5" aria-describedby="inputGroupFileAddon04" aria-label="Upload" onchange="readURL5(this);">
+    <input type="file" class="form-control" id="kondisi_5" name="kondisi_5" aria-describedby="inputGroupFileAddon04" aria-label="Upload" onchange="readURL5(this);" required>
    
   </div>
   <div>
@@ -109,7 +91,7 @@ if (!$result_skpk) {
 
   <label for="kondisi_6" class="form-label">Kondisi 6 :</label>
   <div class="input-group">
-    <input type="file" class="form-control" id="kondisi_6" name="kondisi_6" aria-describedby="inputGroupFileAddon04" aria-label="Upload" onchange="readURL6(this);">
+    <input type="file" class="form-control" id="kondisi_6" name="kondisi_6" aria-describedby="inputGroupFileAddon04" aria-label="Upload" onchange="readURL6(this);" required>
     
   </div>
   <div>
@@ -121,7 +103,8 @@ if (!$result_skpk) {
 </div>
 
   <div class="col-12">
-    <input type="submit" class="btn btn-primary" name="submit"> 
+    <input type="submit" class="btn btn-primary" name="submit" value="Upload">
+    <a href="/sitepra" class="btn btn-danger">Kembali </a> 
   </div>
 </form>
 

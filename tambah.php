@@ -1,23 +1,10 @@
 <?php
-error_reporting(E_ALL);
-$servername="localhost";
-$username="root";
-$password="";
-$dbname="sitepra";
-
-$conn=new mysqli($servername,$username,$password,$dbname);
-
-if($conn->connect_error){
-	die("Connection Failed".$conn->connect_error);
-}else{
-	//echo "connected";
-}
-
+include('koneksi.php');
 
 $query_skpk = "SELECT * FROM skpk";
 $result_skpk = mysqli_query($conn,$query_skpk);
 if (!$result_skpk) {
-  die('Invalid query: ' . mysqli_error());
+  die('Invalid query: ' .$mysqli->error);
 }
 ?>
 <!doctype html>

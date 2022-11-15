@@ -1,22 +1,8 @@
 <?php
-error_reporting(E_ALL);
-$servername="localhost";
-$username="root";
-$password="";
-$dbname="sitepra";
-
-$conn=new mysqli($servername,$username,$password,$dbname);
-
-if($conn->connect_error){
-    die("Connection Failed".$conn->connect_error);
-}
+include('koneksi.php');
 if(isset($_POST['submit'])){ 
 
-    simpan_laporan();
-  
-}
 
-function simpan_laporan(){ 
 
 
         $nama_paket = $_POST['nama_paket'];
@@ -150,31 +136,19 @@ function simpan_laporan(){
 
 
                     $result = mysqli_query($conn,$query);
+                    if($result){
+                        header('Location: index.php');
+                    }
                     if (!$result) {
-                        die('Invalid query: ' . mysqli_error());
+                        die('Invalid query: ' .$mysqli->error);
                         }
+                 
                     
                     
 
                 
-
-
             
-        }
-
-
-
-    
-
-
-
- 
-   
- 
-
-        
-
-    
+        } 
 
 
 ?>

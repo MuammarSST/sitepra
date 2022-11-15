@@ -199,10 +199,10 @@ if(isset($_POST['Simpan'])){
     ;
     $result = mysqli_query($conn,$query);
     if (!$result) {
-    die('Invalid query: ' . mysqli_error());
+    die('Invalid query: '  .$mysqli->error);
     }
 
-    if($query){
+    if($result){
     header('Location: index.php');
     }
 }

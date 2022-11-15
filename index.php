@@ -1,23 +1,10 @@
 <?php
-error_reporting(E_ALL);
-$servername="localhost";
-$username="root";
-$password="";
-$dbname="sitepra";
-
-$conn=new mysqli($servername,$username,$password,$dbname);
-
-if($conn->connect_error){
-	die("Connection Failed".$conn->connect_error);
-}else{
-	//echo "connected";
-}
-
+include('koneksi.php');
 
 $query_laporan = "SELECT * FROM laporan";
 $result_laporan = mysqli_query($conn,$query_laporan);
 if (!$result_laporan) {
-  die('Invalid query: ' . mysqli_error());
+  die('Invalid query: ' . $mysqli->error);
 }
 
 
@@ -32,21 +19,7 @@ if (!$result_laporan) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
   <body>
-<nav class="navbar navbar-expand-lg bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">SITEPRA</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="/sitepra">Beranda</a>
-        <a class="nav-link" href="#">Download</a>
-        <a class="nav-link" href="#">Signout</a>
-      </div>
-    </div>
-  </div>
-</nav>
+<?php include('nav.php');?>
 
 
 	
