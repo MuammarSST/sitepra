@@ -254,20 +254,20 @@ $row = mysqli_fetch_array($result);
     <input type="text" class="form-control" id="pr_nama_perusahaan" name="pr_nama_perusahaan" value="<?php echo $row['pr_nama_perusahaan']; ?>" required >
   </div>
   <div class="col-12">
-    <label for="pr_nama_perusahaan" class="form-label">2. Alamat Perusahaan :</label>
-    <input type="text" class="form-control" id="pr_nama_perusahaan" name="pr_alamat_perusahaan" value="<?php echo $row['pr_alamat_perusahaan']; ?>" required>
+    <label for="pr_alamat_perusahaan" class="form-label">2. Alamat Perusahaan :</label>
+    <input type="text" class="form-control" id="pr_alamat_perusahaan" name="pr_alamat_perusahaan" value="<?php echo $row['pr_alamat_perusahaan']; ?>" required>
   </div>
   <div class="col-12">
-    <label for="pr_nama_perusahaan" class="form-label">3. Nama Pimpinan :</label>
-    <input type="text" class="form-control" id="pr_nama_perusahaan" name="pr_nama_pimpinan" value="<?php echo $row['pr_nama_pimpinan']; ?>" required>
+    <label for="pr_nama_pimpinan" class="form-label">3. Nama Pimpinan :</label>
+    <input type="text" class="form-control" id="pr_nama_pimpinan" name="pr_nama_pimpinan" value="<?php echo $row['pr_nama_pimpinan']; ?>" required>
   </div>
   <div class="col-12">
-    <label for="pr_nama_perusahaan" class="form-label">4. Alamat Pimpinan :</label>
-    <input type="text" class="form-control" id="pr_nama_perusahaan" name="pr_alamat_pimpinan" value="<?php echo $row['pr_alamat_pimpinan']; ?>" required>
+    <label for="pr_alamat_pimpinan" class="form-label">4. Alamat Pimpinan :</label>
+    <input type="text" class="form-control" id="pr_alamat_pimpinan" name="pr_alamat_pimpinan" value="<?php echo $row['pr_alamat_pimpinan']; ?>" required>
   </div>
   <div class="col-12">
     <label for="pr_nilai_kontrak" class="form-label">5. Nilai Kontrak :</label>
-    <input type="text" class="form-control" id="pr_nama_perusahaan" name="pr_nilai_kontrak" value="<?php echo $row['pr_nilai_kontrak']; ?>" required>
+    <input type="text" class="form-control" id="pr_nilai_kontrak" name="pr_nilai_kontrak" value="<?php echo $row['pr_nilai_kontrak']; ?>" required>
   </div>
   </div>
 </div>
