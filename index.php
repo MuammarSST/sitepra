@@ -73,6 +73,11 @@ if (!$result_laporan) {
 			<input type="hidden" name="id_paket" value="<?php echo $id_paket ?>">
 			<input type="submit" name="edit_paket" value="Upload Foto" class ="btn btn-info">
 		</form>
+<br>
+    <form method="POST" action="rincian.php" >
+			<input type="hidden" name="id_paket" value="<?php echo $id_paket ?>">
+			<input type="submit" name="edit_paket" value="Rincian Data" class ="btn btn-primary">
+		</form>
 
 	 </td>
 	
