@@ -1,3 +1,10 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.8/dist/sweetalert2.all.min.js"></script>
+</head>
+</html>
+
 <?php
 include('koneksi.php');
 if(isset($_POST['submit'])){ 
@@ -137,7 +144,18 @@ if(isset($_POST['submit'])){
 
                     $result = mysqli_query($conn,$query);
                     if($result){
-                        header('Location: index.php');
+                        echo "<script>
+                        Swal.fire({
+                           position: 'center',
+                           icon: 'success',
+                           title: 'Data berhasil disimpan',
+                           showConfirmButton: false,
+                           timer: 1500
+                         }).then((result) => {
+                           window.location = '/sitepra';
+                         });
+                         
+                        </script>";
                     }
                     if (!$result) {
                         die('Invalid query: ' .$mysqli->error);

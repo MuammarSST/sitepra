@@ -386,6 +386,7 @@ if (!$result_skpk) {
 
   <div class="col-12">
     <input type="submit" class="btn btn-primary" name="submit"> 
+    <a href="/sitepra" class="btn btn-danger">Kembali </a>
   </div>
 </form>
 

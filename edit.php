@@ -14,14 +14,16 @@
 include('koneksi.php');
 
 
-  $post_id_paket = $_POST['id_paket'];
+$post_id_paket = $_POST['id_paket'];
 
-$query = "SELECT * FROM laporan where id_paket = '$post_id_paket' ";
+$query = "SELECT laporan.*, skpk.nama_skpk FROM laporan  INNER JOIN skpk ON laporan.skpk_id=skpk.id_skpk where laporan.id_paket = '$post_id_paket' ";
 $result = mysqli_query($conn,$query);
-while($row = mysqli_fetch_array($result)){
+$row = mysqli_fetch_array($result);
+
   ?>
 
-<form class="row g-3" method="post" action="proses/simpan_tambah.php">
+<form class="row g-3" method="post" action="simpan_edit.php">
+  <input type="hidden" name="id_paket" id="id_paket" value="<?php echo $row['id_paket']; ?>">
   
 <div class="card">
   <div class="card-header">
@@ -55,8 +57,19 @@ while($row = mysqli_fetch_array($result)){
 
   <div class="col-12">
       <label for="skpk_id" class="form-label">SKPK :</label>
-      <select id="skpk_id" name="skpk_id" class="form-select"  value="<?php echo $row['skpk_id']; ?>" required>
-        
+      <select id="skpk_id" name="skpk_id" class="form-select"  required>
+      <option value="<?php echo $row['skpk_id']; ?>" selected><?php echo $row['nama_skpk'];?></option>
+      <option disabled> --- Pilih SKPK ---</option>
+      <?php
+      $query_skpk = "SELECT * FROM skpk";
+      $result_skpk = mysqli_query($conn,$query_skpk);
+        	$i=0;
+          while ($data = @mysqli_fetch_assoc($result_skpk)){
+          ?>
+           <option value="<?php echo $data['id_skpk'];?>"><?php echo $data['nama_skpk'];?></option>
+          <?php 
+         $i++;
+        } ?>
 
       </select>
     </div>
@@ -361,12 +374,11 @@ while($row = mysqli_fetch_array($result)){
 
 
   <div class="col-12">
-    <input type="submit" class="btn btn-primary" value="Simpan">
+  <input type="submit" class="btn btn-primary" name="submit">
     <a href="/sitepra" class="btn btn-danger">Kembali </a>
   </div>
 </form>
 
-<?php }	?>
 
 </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
